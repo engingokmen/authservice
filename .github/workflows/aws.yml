@@ -26,6 +26,7 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon EC2
+      uses: aws-actions/amazon-ecr-login@v1
       id: i-0e3a8f2b0bb4dbee4
 
     - name: Connection Test

@@ -12,5 +12,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ secrets.AWS_PRIVATE }}
       - run: ssh -o "IdentitiesOnly=yes" -i ${{ secrets.AWS_PRIVATE }} ubuntu@ec2-18-156-211-223.eu-central-1.compute.amazonaws.com

@@ -1,4 +1,4 @@
-FROM node:17.2.0-alpine3.12
+FROM node:17.2.0-alpine3.12 AS dtapp
 
 WORKDIR /usr/src/app
 

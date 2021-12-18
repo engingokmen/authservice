@@ -8,8 +8,6 @@ services:
       - MONGO_URL=$MONGO_URL
       - MONGO_PORT=$MONGO_PORT
       - SECRET_KEY=$SECRET_KEY
-    env_file:
-      - .env
     ports:
       - 8080:8080
     depends_on:

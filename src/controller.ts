@@ -7,6 +7,9 @@ class UserController {
   async signin(req: Request, res: Response) {
     const { email: reqEmail, password } = req.body;
     const user = await User.findOne({ email: reqEmail }).exec();
+    if (!user) {
+      res.json({ msg: "user does not exist" });
+    }
     const { name, lastname, email } = user;
     const authenticated = await crypto.compare(password, user.password);
     if (authenticated === true) {
